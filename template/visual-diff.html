@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="./bower_components/jsondiffpatch/public/build/jsondiffpatch.min.js"></script>
+        <script type="text/javascript" src="./bower_components/jsondiffpatch/public/build/jsondiffpatch-formatters.min.js">
+        </script>
+        <script type="text/javascript" src="./node_modules/underscore/underscore-min.js"></script>
+        <link rel="stylesheet" href="./bower_components/jsondiffpatch/public/formatters-styles/html.css" type="text/css" />
+        <link rel="stylesheet" href="./bower_components/jsondiffpatch/public/formatters-styles/annotated.css" type="text/css" />
+    </head>
+    <body>
+        <div id="visual"></div>
+        <hr/>
+        <div id="annotated"></div>
+        <script>
+
+            var json1 = _.unescape('{{json1}}');
+            var json2 = _.unescape('{{json2}}');
+
+            json1 = JSON.parse(json1);
+            json2 = JSON.parse(json2);
+
+            var delta = jsondiffpatch.diff(json1,json2 );
+
+            // beautiful html diff
+            document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, json1);
+
+        </script>
+    </body>
+</html>

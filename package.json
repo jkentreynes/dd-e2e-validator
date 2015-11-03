@@ -1,0 +1,17 @@
+{
+  "name": "dd-e2e-validator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^0.26.1",
+    "handlebars": "^4.0.4",
+    "jsondiffpatch": "^0.1.37",
+    "underscore": "^1.8.3"
+  }
+}
